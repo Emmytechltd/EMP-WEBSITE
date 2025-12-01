@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EMP 2015 Set Photo Gallery - Matriculation, Classes, Final Year, Graduation, and Reunion Photos">
+  <title>Gallery - EMP 2015 Set Alumni</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <nav>
+      <div class="logo">
+        <span>🎓</span>
+        <span>EMP 2015</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" style="min-height: 300px;">
+    <div class="hero-content">
+      <h1>Our Gallery</h1>
+      <p class="subtitle">Moments that define us</p>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Photo Albums</h2>
+        <p>Memorable moments from our journey together</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="matriculation">Matriculation</button>
+        <button class="filter-btn" data-filter="classes">Classes & Activities</button>
+        <button class="filter-btn" data-filter="finalyear">Final Year</button>
+        <button class="filter-btn" data-filter="graduation">Graduation</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Gallery items will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Gallery Image">
+    </div>
+    <div class="lightbox-nav">
+      <button id="lightbox-prev">❮ Previous</button>
+      <button id="lightbox-next">Next ❯</button>
+    </div>
+  </div>
+
+  <!-- GALLERY DESCRIPTION SECTION -->
+  <section class="container" style="padding: 4rem 2rem; background-color: #f8f9fa;">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Our Albums</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      
+      <div style="padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">👨‍🎓</div>
+        <h3 style="color: #2c5aa0; margin-bottom: 0.5rem;">Matriculation</h3>
+        <p style="font-size: 0.95rem;">
+          The beginning of our journey. These photos capture the excitement and anticipation of our first day 
+          on campus as freshmen, along with our official matriculation ceremony.
+        </p>
+      </div>
+
+      <div style="padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">📚</div>
+        <h3 style="color: #2c5aa0; margin-bottom: 0.5rem;">Lectures & Class Activities</h3>
+        <p style="font-size: 0.95rem;">
+          Moments from our academic life - engaging lectures, group projects, classroom discussions, 
+          study sessions, and collaborative learning experiences throughout our years.
+        </p>
+      </div>
+
+      <div style="padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">🎊</div>
+        <h3 style="color: #2c5aa0; margin-bottom: 0.5rem;">Final Year Moments</h3>
+        <p style="font-size: 0.95rem;">
+          The culmination of our academic journey - final year projects, seminars, presentations, 
+          and unforgettable moments as we prepared to leave campus.
+        </p>
+      </div>
+
+      <div style="padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">🎓</div>
+        <h3 style="color: #2c5aa0; margin-bottom: 0.5rem;">Graduation Day</h3>
+        <p style="font-size: 0.95rem;">
+          Our proudest moment! The official graduation ceremony, convocation, and celebration with family 
+          and friends as we received our degrees and embarked on new paths.
+        </p>
+      </div>
+
+      <div style="padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">🎉</div>
+        <h3 style="color: #2c5aa0; margin-bottom: 0.5rem;">Reunion Events</h3>
+        <p style="font-size: 0.95rem;">
+          Celebrating our bond beyond campus. Photos from our alumni reunions and get-togethers where 
+          we reconnect, reminisce, and strengthen our ties over the years.
+        </p>
+      </div>
+
+      <div style="padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">📸</div>
+        <h3 style="color: #2c5aa0; margin-bottom: 0.5rem;">Special Moments</h3>
+        <p style="font-size: 0.95rem;">
+          Candid shots and special moments - celebrations, achievements, adventures, and the everyday 
+          moments that made our journey truly memorable.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTRIBUTE SECTION -->
+  <section style="background: linear-gradient(135deg, #1a3d5c 0%, #2c5aa0 100%); color: white; padding: 3rem 2rem;">
+    <div class="container" style="text-align: center;">
+      <h2 style="color: #d4af37; border-bottom-color: #d4af37; display: inline-block;">Help Us Grow Our Gallery</h2>
+      <p style="font-size: 1.1rem; margin: 1.5rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Do you have photos from our EMP 2015 Set days? We'd love to add them to our gallery! 
+        Share your memories and help us preserve our shared history.
+      </p>
+      <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Share Your Photos</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-text">
+        <p><strong>EMP 2015 Set – Umunze Branch</strong></p>
+        <p>Educational Management and Policy Department</p>
+        <p>Nnamdi Azikiwe University, Awka</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://facebook.com" class="social-icon" title="Facebook" target="_blank">f</a>
+        <a href="https://emmytech.netlify.app/" class="social-icon" title="Instagram" target="_blank">📷</a>
+        <a href="https://wa.me/2347067797360" class="social-icon" title="WhatsApp" target="_blank">💬</a>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2024 EMP 2015 Set Alumni Association. All rights reserved.</p>
+        <p>Designed By Emmytech ❤️ for our alumni community</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scroll-top-btn" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background-color: #1a3d5c; color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 999; transition: all 0.3s ease;">
+    ↑
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
