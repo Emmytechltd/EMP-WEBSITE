@@ -53,6 +53,8 @@ const galleryData = [
   { id: 6, title: 'Final Year 2', category: 'finalyear', image: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%231a3d5c" width="400" height="300"/%3E%3Ctext x="200" y="150" font-size="24" text-anchor="middle" fill="white" dy=".3em"%3EFinal Year Seminar%3C/text%3E%3C/svg%3E' },
   { id: 7, title: 'Graduation 1', category: 'graduation', image: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%23d4af37" width="400" height="300"/%3E%3Ctext x="200" y="150" font-size="24" text-anchor="middle" fill="%231a3d5c" dy=".3em"%3EGraduation Ceremony%3C/text%3E%3C/svg%3E' },
   { id: 8, title: 'Graduation 2', category: 'graduation', image: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%23f4e4c1" width="400" height="300"/%3E%3Ctext x="200" y="150" font-size="24" text-anchor="middle" fill="%231a3d5c" dy=".3em"%3ECelebration Day%3C/text%3E%3C/svg%3E' },
+  { id: 9, title: 'Nonny 1', category: 'graduation', image: 'assets/images/gallery/nonny1.jpeg' },
+  { id: 10, title: 'Nonn', category: 'graduation', image: 'assets/images/gallery/nonn.jpeg' },
 ];
 
 // Initialize gallery if it exists on the page
