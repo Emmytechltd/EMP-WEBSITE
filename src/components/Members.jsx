@@ -1,4 +1,4 @@
-import { Linkedin, MapPin, MessageCircle, UserRound } from 'lucide-react';
+import { Facebook, Linkedin, MapPin, MessageCircle, UserRound } from 'lucide-react';
 import { members, testimonials } from '../data/siteData';
 import GlassCard from './GlassCard';
 import SectionHeader from './SectionHeader';
@@ -18,8 +18,12 @@ export default function Members() {
             <GlassCard key={`${member.name}-${index}`} className="p-5" delay={index * 0.03}>
               <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/20 to-white/5 p-5">
                 <div className="absolute -right-6 -top-6 size-24 rounded-full bg-aurora/20 blur-2xl" />
-                <div className="relative grid size-16 place-items-center rounded-2xl bg-white text-night">
-                  <UserRound className="size-8" />
+                <div className="relative grid size-16 place-items-center overflow-hidden rounded-2xl bg-white text-night">
+                  {member.avatar ? (
+                    <img src={member.avatar} alt={member.name} className="h-full w-full object-cover" />
+                  ) : (
+                    <UserRound className="size-8" />
+                  )}
                 </div>
               </div>
               <h3 className="mt-5 text-xl font-black text-white">{member.name}</h3>
@@ -33,10 +37,18 @@ export default function Members() {
                 <a href="#" className="icon-link" aria-label={`${member.name} LinkedIn`}>
                   <Linkedin className="size-4" />
                 </a>
+                {member.facebook ? (
+                  <a href={member.facebook} className="icon-link" target="_blank" rel="noreferrer" aria-label={`${member.name} Facebook`}>
+                    <Facebook className="size-4" />
+                  </a>
+                ) : null}
                 <a href={`https://wa.me/${member.phone.replace(/\D/g, '')}`} className="icon-link" target="_blank" rel="noreferrer" aria-label={`${member.name} WhatsApp`}>
                   <MessageCircle className="size-4" />
                 </a>
               </div>
+              {member.socialHandle ? (
+                <p className="mt-2 text-xs text-slate-400">Facebook: {member.socialHandle}</p>
+              ) : null}
             </GlassCard>
           ))}
         </div>

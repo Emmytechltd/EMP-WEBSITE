@@ -84,6 +84,9 @@ export default function Projects() {
                   exit={{ opacity: 0, scale: 0.96 }}
                   whileHover={{ y: -4 }}
                 >
+                      {item.image ? (
+                    <img src={item.image} alt={item.title} className="absolute inset-0 h-full w-full object-cover" />
+                  ) : null}
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_10%,rgba(100,255,218,.32),transparent_35%),linear-gradient(135deg,rgba(138,180,255,.32),rgba(247,201,72,.18),rgba(15,23,42,1))]" />
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.08)_1px,transparent_1px)] bg-[size:28px_28px] opacity-30" />
                   <div className="absolute inset-x-0 bottom-0 p-5">
@@ -123,7 +126,11 @@ export default function Projects() {
               >
                 <X className="size-5" />
               </button>
-              <div className="aspect-video rounded-[1.5rem] bg-[radial-gradient(circle_at_30%_10%,rgba(100,255,218,.36),transparent_35%),linear-gradient(135deg,rgba(138,180,255,.34),rgba(247,201,72,.2),rgba(15,23,42,1))]" />
+              {activeImage.image ? (
+                <img src={activeImage.image} alt={activeImage.title} className="aspect-video w-full rounded-[1.5rem] object-cover" />
+              ) : (
+                <div className="aspect-video rounded-[1.5rem] bg-[radial-gradient(circle_at_30%_10%,rgba(100,255,218,.36),transparent_35%),linear-gradient(135deg,rgba(138,180,255,.34),rgba(247,201,72,.2),rgba(15,23,42,1))]" />
+              )}
               <div className="p-4">
                 <p className="text-sm font-bold uppercase tracking-[0.22em] text-aurora">{activeImage.category}</p>
                 <h3 className="mt-2 text-3xl font-black text-white">{activeImage.title}</h3>

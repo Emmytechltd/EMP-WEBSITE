@@ -17,6 +17,14 @@ import {
   Users,
 } from 'lucide-react';
 
+const chairmanAvatar = new URL('../../image/chairman.jpeg', import.meta.url).href;
+const footballGalleryImage = new URL('../../image/team emp.jpeg', import.meta.url).href;
+const onuEmmaAvatar = new URL('../../image/onu emma.jpeg', import.meta.url).href;
+const nellyAvatar = new URL('../../image/nelly.jpeg', import.meta.url).href;
+const dominicAvatar = new URL('../../image/dominic.jpeg', import.meta.url).href;
+const julietGalleryImage = new URL('../../image/juliet.jpeg', import.meta.url).href;
+const vectaGalleryImage = new URL('../../image/Vecta.jpeg', import.meta.url).href;
+
 export const navItems = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
@@ -107,23 +115,34 @@ export const projects = [
 ];
 
 export const galleryItems = [
-  { id: 1, title: 'Matriculation Day', category: 'matriculation' },
+  { id: 1, title: 'Matriculation Football', category: 'matriculation', image: footballGalleryImage },
   { id: 2, title: 'Matriculation Ceremony', category: 'matriculation' },
-  { id: 3, title: 'Class Lecture', category: 'classes' },
-  { id: 4, title: 'Group Work Session', category: 'classes' },
-  { id: 5, title: 'Final Year Project', category: 'finalyear' },
-  { id: 6, title: 'Final Year Seminar', category: 'finalyear' },
-  { id: 7, title: 'Graduation Ceremony', category: 'graduation' },
-  { id: 8, title: 'Celebration Day', category: 'graduation' },
+  { id: 3, title: 'Vecta', category: 'matriculation', image: vectaGalleryImage },
+  { id: 4, title: 'Juliet', category: 'matriculation', image: julietGalleryImage },
+  { id: 5, title: 'Class Lecture', category: 'classes' },
+  { id: 6, title: 'Group Work Session', category: 'classes' },
+  { id: 7, title: 'Final Year Project', category: 'finalyear' },
+  { id: 8, title: 'Final Year Seminar', category: 'finalyear' },
+  { id: 9, title: 'Graduation Ceremony', category: 'graduation' },
+  { id: 10, title: 'Celebration Day', category: 'graduation' },
 ];
 
 export const members = [
-  { name: 'Onu Johnbosco', position: 'Class President', role: 'Entrepreneur', location: 'Abuja, Nigeria', phone: '+233262114538' },
+  {
+    name: 'Onu Johnbosco',
+    position: 'Chairman',
+    role: 'Entrepreneur',
+    location: 'Abuja, Nigeria',
+    phone: '+233262114538',
+    avatar: chairmanAvatar,
+    facebook: 'https://www.facebook.com/JohnboscoMicheal',
+    socialHandle: 'Johnbosco Micheal',
+  },
   { name: 'Amara Dubem', position: 'Vice President', role: 'Policy Consultant', location: 'USA, Nigeria', phone: '234' },
-  { name: 'Dominic Chigbo', position: 'Secretary', role: 'Realtor', location: 'Anambra, Nigeria', phone: '234' },
+  { name: 'Dominic Chigbo', position: 'Secretary', role: 'Realtor', location: 'Anambra, Nigeria', phone: '234', avatar: dominicAvatar },
   { name: 'Dominic Chigboo', position: 'Treasurer', role: 'Educational Researcher', location: 'Port Harcourt, Nigeria', phone: '234' },
-  { name: 'Onu Emmanuel', position: 'Social Director', role: 'Techprenuer', location: 'Lagos, Nigeria', phone: '2347067797360' },
-  { name: 'Eluma Chinelo', position: 'Public Relations Officer', role: 'Chef', location: 'Abuja, Nigeria', phone: '2348065454940' },
+  { name: 'Onu Emmanuel', position: 'Social Director', role: 'Techprenuer', location: 'Lagos, Nigeria', phone: '2347067797360', avatar: onuEmmaAvatar },
+  { name: 'Eluma Chinelo', position: 'Public Relations Officer', role: 'Chef', location: 'Abuja, Nigeria', phone: '2348065454940', avatar: nellyAvatar },
   { name: 'Nwaneka', position: 'Member', role: 'NGO Director', location: 'Kano, Nigeria', phone: '234', specialty: 'Education Policy' },
   { name: 'Ekowin Apochi', position: 'Member', role: 'Education Consultant', location: 'Anambra, Nigeria', phone: '234', specialty: 'School Management' },
 ];
